@@ -1,0 +1,22 @@
+{
+  "name": "array_methods_exercises",
+  "version": "1.0.0",
+  "description": "This  project  is a training  exercise on using array methods",
+  "main": "index.js",
+  "type":"module",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malak-khalousy1/array_methods_exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malak-khalousy1/array_methods_exercises/issues"
+  },
+  "homepage": "https://github.com/Malak-khalousy1/array_methods_exercises#readme"
+}
