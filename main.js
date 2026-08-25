@@ -8,6 +8,9 @@ import {
   commonElements1,
   commonElements2,
   commonElements3,
+  convertInitials1,
+  convertInitials2,
+  convertInitials3,
   countEligible1,
   countEligible2,
   countEligible3,
@@ -15,6 +18,12 @@ import {
   duplicated1,
   duplicated2,
   duplicated3,
+  findProduct1,
+  findProduct2,
+  findProduct3,
+  findWord5Letter1,
+  findWord5Letter2,
+  findWord5Letter3,
   largestNumberAndBefore1,
   largestNumberAndBefore2,
   largestNumberAndBefore3,
@@ -78,3 +87,19 @@ import {
 // //q11
 // const data = ["red","yellow","green","purple","blue","white"];
 // console.log(Reverse2(data));
+
+// //q12
+// const data = ["Eduard Newgate", "Naruto Uzumaki"];
+// console.log(convertInitials1(data));
+
+//q13
+const data = [
+  { name: "Laptop", price: 500, quantity: 3 },
+  { name: "Phone", price: 1200, quantity: 1 },
+  { name: "Tablet", price: 400, quantity: 2 },
+];
+console.log(findProduct1(data));
+
+// //q14
+// const data = ["Apple","cherry","banana", "date", "elderberry"];
+// console.log(findWord5Letter3(data));

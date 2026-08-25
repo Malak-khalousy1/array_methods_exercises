@@ -316,7 +316,7 @@ export const splitChunks3 = (arr = []) => {
   return result;
 };
 
-//Reverse each word in the array
+//q11:Reverse each word in the array
 export const Reverse2 = (arr = []) => {
   let res = [];
   arr.forEach(function (word) {
@@ -328,4 +328,102 @@ export const Reverse2 = (arr = []) => {
 export const Reverse3 = (arr = []) => {
   const res = arr.map((word) => word.split("").reverse().join(""));
   return res;
+};
+
+//q12:Convert full names into initials
+
+export const convertInitials1 = (arr = []) => {
+  const init = [];
+  let index = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    let name = arr[i];
+    let first = name[0];
+    let second = "";
+    for (let j = 0; j < name.length; j++) {
+      if (name[j] === " ") {
+        second = name[j + 1];
+        break;
+      }
+    }
+    init[index] = first + "." + second;
+    index++;
+  }
+  return init;
+};
+
+export const convertInitials2 = (arr = []) => {
+  const res = arr.map((name) => {
+    return name
+      .split(" ")
+      .map((word) => word[0])
+      .join(".");
+  });
+  return res;
+};
+
+export const convertInitials3 = (arr = []) => {
+  const res = arr.reduce((result, name) => {
+    const init = name
+      .split(" ")
+      .map((w) => w[0])
+      .join(".");
+
+    result.push(init);
+
+    return result;
+  }, []);
+  return res;
+};
+//q13:Find the first product with a total price over 1000
+export const findProduct1 = (arr = []) => {
+  let result;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].price * arr[i].quantity > 1000) {
+      result = arr[i];
+      break;
+    }
+  }
+  return result;
+};
+export const findProduct2 = (arr = []) => {
+  const res = arr.find((product) => product.price * product.quantity > 1000);
+  return res;
+};
+
+export const findProduct3 = (arr = []) => {
+  const res = arr.filter(
+    (product) => product.price * product.quantity > 1000,
+  )[0];
+  return res;
+};
+
+//q14:Find words with 5 letters or more and sort them
+
+export const findWord5Letter1 = (arr = []) => {
+  const res = [];
+  let index = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    let name = arr[i];
+    if (name.length >= 5) {
+      res[index] = name;
+      index++;
+    }
+  }
+  sortAlphabetically1(res);
+  return res;
+};
+
+export const findWord5Letter2 = (arr = []) => {
+  const res = arr.filter((num) => num.length >= 5);
+  return res.sort();
+};
+
+export const findWord5Letter3 = (arr = []) => {
+  const result = arr.reduce((res, num) => {
+    if (num.length >= 5) res.push(num);
+    return res;
+  }, []);
+  return result.sort();
 };
