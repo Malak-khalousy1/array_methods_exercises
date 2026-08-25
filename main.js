@@ -18,6 +18,9 @@ import {
   duplicated1,
   duplicated2,
   duplicated3,
+  findPassed1,
+  findPassed2,
+  findPassed3,
   findProduct1,
   findProduct2,
   findProduct3,
@@ -41,6 +44,8 @@ import {
   splitChunks1,
   splitChunks2,
   splitChunks3,
+  sumOnlyPositive1,
+  sumOnlyPositive2,
 } from "./lib.js";
 ////q1
 // const data=[77,88,44,99,37,95];
@@ -92,14 +97,26 @@ import {
 // const data = ["Eduard Newgate", "Naruto Uzumaki"];
 // console.log(convertInitials1(data));
 
-//q13
-const data = [
-  { name: "Laptop", price: 500, quantity: 3 },
-  { name: "Phone", price: 1200, quantity: 1 },
-  { name: "Tablet", price: 400, quantity: 2 },
-];
-console.log(findProduct1(data));
+// //q13
+// const data = [
+//   { name: "Laptop", price: 500, quantity: 3 },
+//   { name: "Phone", price: 1200, quantity: 1 },
+//   { name: "Tablet", price: 400, quantity: 2 },
+// ];
+// console.log(findProduct1(data));
 
 // //q14
 // const data = ["Apple","cherry","banana", "date", "elderberry"];
 // console.log(findWord5Letter3(data));
+
+// //q14
+// const data = [1, 11, -9, 20, -3, 8, -1];
+// console.log(sumOnlyPositive2(data));
+
+//q15
+const data = [
+  { name: "Sara", status: "pass" },
+  { name: "Ali", status: "fail" },
+  { name: "Lina", status: "pass" },
+];
+console.log(findPassed3(data));

@@ -427,3 +427,57 @@ export const findWord5Letter3 = (arr = []) => {
   }, []);
   return result.sort();
 };
+
+//q15:Use reduce to sum only positive number
+
+export const sumOnlyPositive1 = (arr = []) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum = sum + arr[i];
+    }
+  }
+  return sum;
+};
+
+export const sumOnlyPositive2 = (arr = []) => {
+  const result = arr.reduce((res, num) => {
+    if (num > 0) res = res + num;
+    return res;
+  }, 0);
+  return result;
+};
+
+export const sumOnlyPositive3 = (arr = []) => {
+  const result = arr.reduce((res, num) => {
+    if (num > 0) res = res + num;
+    return res;
+  }, 0);
+  return result;
+};
+
+//q16 :Extract names of students who passed
+export const findPassed1 = (arr = []) => {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].status == "pass") {
+      result.push(arr[i].name);
+    }
+  }
+  return result;
+};
+
+export const findPassed2 = (arr = []) => {
+  const res = arr
+    .filter((student) => student.status == "pass")
+    .map((student) => student.name);
+  return res;
+};
+
+export const findPassed3 = (arr = []) => {
+  const result = arr.reduce((res, student) => {
+    if (student.status == "pass") res.push(student.name);
+    return res;
+  }, []);
+  return result.sort();
+};
