@@ -22,11 +22,16 @@ import {
   longestName1,
   longestName2,
   longestName3,
+  Reverse2,
+  Reverse3,
   sortAlphabetically1,
   sortAlphabetically2,
   specificNumber1,
   specificNumber2,
   specificNumber3,
+  splitChunks1,
+  splitChunks2,
+  splitChunks3,
 } from "./lib.js";
 ////q1
 // const data=[77,88,44,99,37,95];
@@ -58,13 +63,18 @@ import {
 //  const data2 =[ 'B', 'world', 4, 'A', 'hello', 7, 8];
 //  console.log(commonElements3(data1,data2));
 
-
 // //q8
 // const data =['Damascus', 'Homes', 'Aleppo','Al-Qamishli','Al-Hasakah'];
 // console.log(sortAlphabetically2(data));
 
+// //q9
+// const data =[1.5, 2, "3", 4, 2, 5.6, true, 1.5, "7", 8, 4,"3"];
+// console.log(duplicated3(data));
 
-//q9
-const data =[1.5, 2, "3", 4, 2, 5.6, true, 1.5, "7", 8, 4,"3"];
-console.log(duplicated3(data));
+// //q10
+// const data = [1, 2, 3, 4, 5, 6, 7, 8];
+// console.log(splitChunks3(data));
 
+// //q11
+// const data = ["red","yellow","green","purple","blue","white"];
+// console.log(Reverse2(data));

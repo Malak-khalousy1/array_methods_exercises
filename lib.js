@@ -273,12 +273,59 @@ export const duplicated2 = (arr = []) => {
 export const duplicated3 = (arr = []) => {
   arr.sort();
   let res = [];
-  for (let i = 0; i < arr.length-1; i++) {
+  for (let i = 0; i < arr.length - 1; i++) {
     if (arr[i] == arr[i + 1] && !res.includes(arr[i])) {
-        res.push(arr[i]);
+      res.push(arr[i]);
     }
   }
   return res;
 };
 
-//
+// q10:Split an array into chunks of size 3
+
+export const splitChunks1 = (arr = []) => {
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    const index = Math.floor(i / 3);
+    if (!res[index]) {
+      res[index] = [];
+    }
+    res[index].push(arr[i]);
+  }
+  return res;
+};
+
+export const splitChunks2 = (arr = []) => {
+  let res = [];
+  for (let i = 0; i < arr.length; i += 3) {
+    res.push(arr.slice(i, i + 3));
+  }
+  return res;
+};
+
+export const splitChunks3 = (arr = []) => {
+  const result = arr.reduce((res, num, i) => {
+    const index = Math.floor(i / 3);
+    if (!res[index]) {
+      res[index] = [];
+    }
+    res[index].push(num);
+
+    return res;
+  }, []);
+  return result;
+};
+
+//Reverse each word in the array
+export const Reverse2 = (arr = []) => {
+  let res = [];
+  arr.forEach(function (word) {
+    res.push(word.split("").reverse().join(""));
+  });
+  return res;
+};
+
+export const Reverse3 = (arr = []) => {
+  const res = arr.map((word) => word.split("").reverse().join(""));
+  return res;
+};
