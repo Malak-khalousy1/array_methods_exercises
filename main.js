@@ -1,5 +1,17 @@
 import {
-    countEligible1,
+  adjacentNeighbors1,
+  adjacentNeighbors2,
+  adjacentNeighbors3,
+  average1,
+  average2,
+  average3,
+  commonElements1,
+  commonElements2,
+  commonElements3,
+  countEligible1,
+  countEligible2,
+  countEligible3,
+  countEligible4,
   largestNumberAndBefore1,
   largestNumberAndBefore2,
   largestNumberAndBefore3,
@@ -7,18 +19,42 @@ import {
   longestName1,
   longestName2,
   longestName3,
+  specificNumber1,
+  specificNumber2,
+  specificNumber3,
 } from "./lib.js";
 ////q1
 // const data=[77,88,44,99,37,95];
 // const {largest,b_largest}=largestNumberAndBefore4(data);
-
 // console.log(`Largest: ${largest}`, ` Before the largest:${b_largest}` );
+
 
 // //q2
 // const data=["Sophia", "Jackson", "alaaAldeen", "Olivia", "Liam", "Emma"];
-
 // console.log(longestName3(data));
- 
-//q4
-const data=[10, 5, 23, 18, 19, 6, 25, 11, 3, 66, 50, 41, 14, 8, 33, 17, 54, 28];
-console.log(countEligible1(data));
+
+
+// //q3
+// const data = [3, 1, 3, 4, 5, 12, 31, 4, 16, 2, 15];
+// console.log(adjacentNeighbors3(data));
+
+
+// //q4
+// const data=[10, 5, 23, 18, 19, 6, 25, 11, 3, 66, 50, 41, 14, 8, 33, 17, 54, 28];
+// console.log(countEligible4(data));
+
+
+// //q5
+// const data=[1111,2222,3333,7777,8888];
+// console.log(specificNumber3(data ,111));
+
+
+// //q6
+// const data = [11, 15, 84, 54, 21, 74, 85];
+// console.log(average3(data));
+
+
+// //q7
+//  const data1 = [1, 'hello', 'A', 3, 'world', 'B', 5] 
+//  const data2 =[ 'B', 'world', 4, 'A', 'hello', 7, 8];
+//  console.log(commonElements3(data1,data2));

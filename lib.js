@@ -80,13 +80,148 @@ export const longestName3 = (arr = []) => {
   return [longest];
 };
 
+//q3:Extract numbers bigger than their adjacent neighbors
+
+export const adjacentNeighbors1 = (arr = []) => {
+  let index = 0;
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (
+      (i == 0 || arr[i] > arr[i - 1]) &&
+      (i == arr.length - 1 || arr[i] > arr[i + 1])
+    ) {
+      res[index] = arr[i];
+      index++;
+    }
+  }
+  return res;
+};
+
+export const adjacentNeighbors2 = (arr = []) => {
+  const res = arr.filter((num, index, array) => {
+    const isBiggerLeft = index == 0 || num > array[index - 1];
+    const isBiggerRight = index == array.length - 1 || num > array[index + 1];
+    return isBiggerLeft && isBiggerRight;
+  });
+  return res;
+};
+
+export const adjacentNeighbors3 = (arr = []) => {
+  let res = arr.reduce((acc, number, index, array) => {
+    if (
+      (index == 0 || number > array[index - 1]) &&
+      (index == array.length - 1 || number > array[index + 1])
+    ) {
+      acc.push(number);
+    }
+    return acc;
+  }, []);
+  return res;
+};
+
 ////q4:Count the number of people eligible to vote
 
 export const countEligible1 = (arr = []) => {
   let count = 0;
- 
+
   for (let i = 0; i < arr.length; i++) {
-    if(arr[i]>=18) count++;
+    if (arr[i] >= 18) count++;
   }
   return count;
+};
+
+export const countEligible2 = (arr = []) => {
+  let count = 0;
+  arr.forEach((numder) => {
+    if (numder >= 18) count++;
+  });
+
+  return count;
+};
+
+export const countEligible3 = (arr = []) => {
+  const res = arr.filter((number) => number >= 18);
+  return res.length;
+};
+export const countEligible4 = (arr = []) => {
+  const count = arr.reduce((acc, num) => {
+    if (num >= 18) {
+      return acc + 1;
+    } else {
+      return acc;
+    }
+  }, 0);
+  return count;
+};
+
+//q5:Check if a specific number exists in the array
+export const specificNumber1 = (arr = [], number) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == number) return "true";
+    return "false";
+  }
+};
+
+export const specificNumber2 = (arr = [], number) => {
+  return arr.includes(number);
+};
+
+export const specificNumber3 = (arr = [], num) => {
+  const count = arr.filter((number) => number == num).length;
+  if (count == 0) return false;
+  return true;
+};
+
+//q6:Calculate the average of numbers
+export const average1 = (arr = []) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum / arr.length;
+};
+
+export const average2 = (arr = []) => {
+  const count = arr.reduce((acc, num) => {
+    return acc + num;
+  }, 0);
+  return count / arr.length;
+};
+
+export const average3 = (arr = []) => {
+  let sum = 0;
+  arr.forEach((num) => {
+    sum = sum + num;
+  });
+  return sum / arr.length;
+};
+
+//q7:Find common elements between two arrays
+export const commonElements1 = (arr1 = [], arr2 = []) => {
+  let index = 0;
+  let res = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] == arr2[j]) {
+        res[index] = arr1[i];
+        index++;
+      }
+    }
+  }
+  return res;
+};
+
+export const commonElements2 = (array1 = [], array2 = []) => {
+  const res = [];
+  array1.forEach((num) => {
+    if (array2.includes(num)) {
+      res.push(num);
+    }
+  });
+  return res;
+};
+
+export const commonElements3 = (array1 = [], array2 = []) => {
+  const res = array1.filter((num) => array2.includes(num));
+  return res;
 };
