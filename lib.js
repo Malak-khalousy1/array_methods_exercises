@@ -225,3 +225,60 @@ export const commonElements3 = (array1 = [], array2 = []) => {
   const res = array1.filter((num) => array2.includes(num));
   return res;
 };
+
+//q8: Sort cities alphabetically
+
+export const sortAlphabetically1 = (arr = []) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+};
+
+export const sortAlphabetically2 = (arr = []) => {
+  return arr.sort();
+};
+
+export const sortAlphabetically3 = (arr = []) => {};
+
+//q9:Find duplicated items in an array
+export const duplicated1 = (arr = []) => {
+  let index = 0;
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (i != j && arr[i] == arr[j]) {
+        res[index] = arr[i];
+        arr[i] = 0;
+        index++;
+        break;
+      }
+    }
+  }
+  return res;
+};
+export const duplicated2 = (arr = []) => {
+  const res = arr.filter((num, index, arr) => {
+    return arr.indexOf(num) != index;
+  });
+  return res;
+};
+
+export const duplicated3 = (arr = []) => {
+  arr.sort();
+  let res = [];
+  for (let i = 0; i < arr.length-1; i++) {
+    if (arr[i] == arr[i + 1] && !res.includes(arr[i])) {
+        res.push(arr[i]);
+    }
+  }
+  return res;
+};
+
+//
